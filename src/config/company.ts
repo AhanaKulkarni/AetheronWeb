@@ -27,9 +27,9 @@ export const COMPANY_INFO = {
   positioningStatement:
     "Engineering intelligence for a world that never stops evolving.",
   heroDescription:
-    "We build intelligent technology, AI-powered systems, and software that transform complex ideas into meaningful real-world solutions.",
+    "We build intelligent technology, AI-powered systems, and software that transform complex operational challenges into dependable real-world platforms — anchored by our flagship manufacturing operating system, AetherBuilt.",
   shortDescription:
-    "An intelligent technology company building AI-powered systems, software architecture, and next-generation industrial platforms.",
+    "An intelligent technology company building advanced software systems, AI-native platforms, and AetherBuilt — our flagship operating system for modern industrial manufacturing.",
   logoSrc: "/images/brand/aetheron-logo.png",
   emblemSrc: "/images/brand/aetheron-emblem.png",
   registeredOffice:
@@ -103,21 +103,21 @@ export const FOCUS_AREAS: FocusArea[] = [
 ];
 
 export const AETHERBUILT_DETAILS = {
-  label: "Aetheron Product",
+  label: "Aetheron Flagship Product",
   name: "AetherBuilt",
+  tagline: "The AI-Native Operating System for Manufacturing",
   description:
-    "An intelligent operating system for manufacturing — bringing production, operations, workforce, inventory, and factory workflows into one connected platform.",
+    "AetherBuilt is an AI-native manufacturing operating system that brings production, machines, inventory, procurement, workforce, and factory operations into one connected platform.",
   supportingLine:
-    "Designed to help manufacturers move beyond fragmented tools and manage their operations through a unified, intelligent control room.",
+    "Engineered to help industrial manufacturers replace fragmented point tools with a unified control room for operational visibility, machine telemetry, and autonomous workflow coordination.",
   ctaLabel: "Explore AetherBuilt",
-  dashboardImg: "/images/products/aetherbuilt-dashboard-clean.jpg",
-  dashboardFullImg: "/images/products/aetherbuilt-dashboard.jpg",
   domains: [
     "Production",
-    "Operations",
-    "Workforce",
+    "Orders",
+    "Machines",
     "Inventory",
-    "Factory Workflows",
+    "Procurement",
+    "Vendors",
   ],
 } as const;
 

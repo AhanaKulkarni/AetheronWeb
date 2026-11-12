@@ -37,9 +37,9 @@ export function WhatWeBuild() {
 
           <Reveal delay={0.14}>
             <p className="mt-6 max-w-2xl text-[16px] sm:text-[17.5px] leading-[1.7] text-[#536176]">
-              We develop intelligent products and technology systems designed to
-              simplify complexity, improve operations, and unlock new
-              possibilities.
+              We develop intelligent software systems and enterprise platforms designed to
+              simplify operational complexity — anchored by our flagship manufacturing
+              operating system, AetherBuilt.
             </p>
           </Reveal>
         </div>

@@ -57,13 +57,14 @@ export function About() {
             <Reveal delay={0.18} className="mt-7 space-y-5">
               <p className="text-[16px] sm:text-[17px] leading-[1.75] text-[#101C32]/90">
                 Aetheron.AI Technologies Private Limited is a technology company
-                focused on building intelligent software, AI-powered solutions,
-                and next-generation digital systems.
+                focused on building intelligent software, AI-powered systems,
+                and next-generation industrial platforms.
               </p>
               <p className="text-[15.5px] sm:text-[16.5px] leading-[1.75] text-[#536176]">
                 We bring together engineering, artificial intelligence, and
-                thoughtful design to solve meaningful problems and create
-                technology that moves businesses forward.
+                thoughtful systems design to solve meaningful operational challenges
+                — with AetherBuilt as our flagship operating system connecting
+                manufacturing enterprises.
               </p>
             </Reveal>
 

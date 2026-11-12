@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aetheron.AI Technologies Private Limited — Corporate Website
 
-## Getting Started
+Official corporate website for **Aetheron.AI Technologies Private Limited**, built with Next.js (App Router), React, TypeScript, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pre-Launch Configuration Checklist
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All company information, product links, founder details, and inquiry delivery settings are centralized so they can be updated cleanly without hunting across components.
 
-## Learn More
+### 1. Corporate Details & External URLs
 
-To learn more about Next.js, take a look at the following resources:
+Copy `.env.example` to `.env.local` or edit [`src/config/company.ts`](src/config/company.ts):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **AetherBuilt Dedicated Website (`AETHERBUILT_WEBSITE_URL`)**: Set `NEXT_PUBLIC_AETHERBUILT_URL` in `.env.local` (or update `AETHERBUILT_WEBSITE_URL` in `src/config/company.ts`) to your live `https://...` URL.
+- **Registered Office**: Set `NEXT_PUBLIC_REGISTERED_OFFICE` or replace `[INSERT OFFICIAL REGISTERED OFFICE ADDRESS]` in `src/config/company.ts`.
+- **Official Email & Phone**: Set `NEXT_PUBLIC_COMPANY_EMAIL` and `NEXT_PUBLIC_COMPANY_PHONE` (or update `COMPANY_INFO` in `src/config/company.ts`).
+- **Canonical Site URL**: Set `NEXT_PUBLIC_SITE_URL` to your production domain (used for `sitemap.xml`, `robots.txt`, Open Graph tags, and Schema.org metadata).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Official Brand Logo & Founder Assets
 
-## Deploy on Vercel
+- **Company Logo**: Drop your official logo asset into `public/images/` and set `COMPANY_INFO.logoSrc` in `src/config/company.ts` (otherwise the built-in vector mark and wordmark render).
+- **Founder Portraits**: Place verified portraits inside `public/images/founders/` and set each founder's `portraitSrc` in `FOUNDERS` inside `src/config/company.ts`.
+- **Founder Biographies, Statements & Story**: Replace the marked editable placeholder copy in `FOUNDERS` and `FOUNDERS_STORY` in `src/config/company.ts` with verified founder-approved text.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Connecting the Inquiry Form (`/api/contact`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The inquiry form submits to `POST /api/contact` (`src/app/api/contact/route.ts`) with full server-side validation and HTML escaping. To enable live email or webhook delivery, configure **one** of the following server-side options in `.env.local` (never expose API keys with `NEXT_PUBLIC_`):
+
+- **Resend**: Set `RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, and `CONTACT_TO_EMAIL`.
+- **SMTP (Nodemailer)**: Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_FROM_EMAIL`, and `CONTACT_TO_EMAIL`.
+- **Webhook**: Set `CONTACT_WEBHOOK_URL`.
+
+Until one of these transports is configured, `/api/contact` intentionally responds with HTTP `503` and an actionable configuration notice rather than silently discarding submissions.
+
+## Verification
+
+```bash
+npm run lint
+npm run build
+```

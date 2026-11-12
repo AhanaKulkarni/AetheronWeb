@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-canvas: #fafbfd;
+  --bg-surface: #ffffff;
+  --text-primary: #101c32;
+  --text-secondary: #536176;
+  --brand-navy: #142a49;
+  --brand-blue: #315eab;
+  --brand-accent: #5d8de0;
+  --brand-sky: #7da8ea;
+  --bg-soft-blue: #eff4fb;
+  --border-subtle: #e5eaf1;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-ink: var(--text-primary);
+  --color-ink-muted: var(--text-secondary);
+  --color-navy: var(--brand-navy);
+  --color-brand: var(--brand-blue);
+  --color-accent: var(--brand-accent);
+  --color-sky: var(--brand-sky);
+  --color-soft-blue: var(--bg-soft-blue);
+  --color-border-subtle: var(--border-subtle);
+
+  --font-sans: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  --font-accent: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #dce7f9;
+  color: #101c32;
+}
+
+/* Editorial typography gradients (restrained deep-navy to brand-blue) */
+.text-gradient-navy {
+  background: linear-gradient(135deg, #142a49 0%, #315eab 65%, #5d8de0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #315eab 0%, #7da8ea 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle architectural blueprint dot/hairline background helpers */
+.bg-architectural-grid {
+  background-image:
+    linear-gradient(to right, rgba(49, 94, 171, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(49, 94, 171, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.bg-soft-radial-atmosphere {
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgba(125, 168, 234, 0.14) 0%, rgba(239, 244, 251, 0.45) 48%, rgba(250, 251, 253, 0) 100%);
+}
+
+/* Focus ring consistency across interactive controls */
+:focus-visible {
+  outline: 2px solid #315eab;
+  outline-offset: 3px;
+}
+
+@keyframes pulse-hairline {
+  0%,
+  100% {
+    transform: translateY(-20%);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(35%);
+    opacity: 0.9;
+  }
+}
+
+.animate-hairline-scroll {
+  animation: pulse-hairline 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hairline-scroll {
+    animation: none;
+    opacity: 0.6;
+  }
 }

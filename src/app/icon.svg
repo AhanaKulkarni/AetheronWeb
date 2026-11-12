@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="16" fill="#FAFBFD"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" stroke="#E5EAF1" stroke-width="2"/>
+  <path d="M32 14L49 48H41.8L32 27.6L22.2 48H15L32 14Z" fill="url(#aetheron_grad)"/>
+  <path d="M23.5 39.5H40.5" stroke="#315EAB" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="32" cy="14" r="2.75" fill="#5D8DE0"/>
+  <defs>
+    <linearGradient id="aetheron_grad" x1="15" y1="14" x2="49" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#142A49"/>
+      <stop offset="1" stop-color="#315EAB"/>
+    </linearGradient>
+  </defs>
+</svg>

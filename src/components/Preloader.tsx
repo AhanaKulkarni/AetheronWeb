@@ -68,7 +68,7 @@ export function Preloader() {
               className="relative flex h-24 w-24 items-center justify-center rounded-3xl border border-[#E5EAF1] bg-[#FFFFFF] p-2.5 shadow-[0_16px_40px_-16px_rgba(49,94,171,0.22)]"
             >
               <Image
-                src="/images/brand/aetheron-emblem.jpg"
+                src="/images/brand/aetheron-emblem.png"
                 alt="Aetheron.AI"
                 width={80}
                 height={80}

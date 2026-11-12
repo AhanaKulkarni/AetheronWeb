@@ -95,7 +95,7 @@ export function Hero() {
         >
           <div className="relative h-5 w-5 overflow-hidden rounded-md border border-[#E5EAF1] bg-white">
             <Image
-              src="/images/brand/aetheron-emblem.jpg"
+              src="/images/brand/aetheron-emblem.png"
               alt="Aetheron Emblem"
               fill
               className="object-contain p-0.5"

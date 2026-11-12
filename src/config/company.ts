@@ -30,8 +30,8 @@ export const COMPANY_INFO = {
     "We build intelligent technology, AI-powered systems, and software that transform complex ideas into meaningful real-world solutions.",
   shortDescription:
     "An intelligent technology company building AI-powered systems, software architecture, and next-generation industrial platforms.",
-  logoSrc: "/images/brand/aetheron-logo.jpg",
-  emblemSrc: "/images/brand/aetheron-emblem.jpg",
+  logoSrc: "/images/brand/aetheron-logo.png",
+  emblemSrc: "/images/brand/aetheron-emblem.png",
   registeredOffice:
     process.env.NEXT_PUBLIC_REGISTERED_OFFICE ||
     "[INSERT OFFICIAL REGISTERED OFFICE ADDRESS]",
@@ -144,7 +144,7 @@ export const FOUNDERS: Founder[] = [
     phone: "+91 8766536270",
     phoneRaw: "8766536270",
     linkedin: "https://www.linkedin.com/in/ayush-pardeshi-8b76b4285/",
-    portraitSrc: "/images/founders/ayush-pardeshi.jpg",
+    portraitSrc: "/images/founders/ayush-pardeshi.png",
     portraitAlt:
       "Portrait of Ayush Pardeshi, Founder & Managing Director at Aetheron.AI Technologies Private Limited",
     biography:
@@ -160,7 +160,7 @@ export const FOUNDERS: Founder[] = [
     phone: "+91 8928352406",
     phoneRaw: "8928352406",
     linkedin: "https://www.linkedin.com/in/ahana-kulkarni-753939272",
-    portraitSrc: "/images/founders/ahana-kulkarni.jpg",
+    portraitSrc: "/images/founders/ahana-kulkarni.png",
     portraitAlt:
       "Portrait of Ahana Kulkarni, Co-Founder & Technical Director at Aetheron.AI Technologies Private Limited",
     biography:

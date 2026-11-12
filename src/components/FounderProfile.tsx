@@ -47,21 +47,37 @@ export function FounderProfile({ founder }: FounderProfileProps) {
       transition={{ duration: 0.8, delay: 0.12, ease: AETHERON_EASE }}
       className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#E5EAF1] bg-[#FFFFFF] shadow-[0_24px_60px_-34px_rgba(20,42,73,0.12)] transition-all duration-500 hover:border-[#315EAB]/40 hover:shadow-[0_28px_70px_-28px_rgba(49,94,171,0.2)]"
     >
-      {/* Portrait Frame — pristine photographic display with smooth subtle zoom */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-[#E5EAF1] bg-gradient-to-b from-[#FAFBFD] via-[#EFF4FB]/60 to-[#FFFFFF]">
+      {/* Portrait Frame — pristine executive studio photographic display with subtle depth */}
+      <div className="relative aspect-[5/4] sm:aspect-[4/3] md:aspect-[5/4] w-full overflow-hidden border-b border-[#E5EAF1] bg-[radial-gradient(ellipse_at_50%_35%,#FFFFFF_0%,#F3F7FD_55%,#E7EFF9_100%)]">
+        {/* Architectural background lattice & soft studio spotlight */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-architectural-grid opacity-25 [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_75%)]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.95)_0%,rgba(93,141,224,0.15)_45%,transparent_72%)] blur-2xl"
+        />
+
+        {/* Grounding contact shadow */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 inset-x-12 h-8 bg-[radial-gradient(ellipse_at_bottom,rgba(20,42,73,0.12)_0%,transparent_75%)] blur-md"
+        />
+
         <Image
           src={founder.portraitSrc}
           alt={founder.portraitAlt}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-contain object-bottom transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+          className="object-contain object-bottom transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025]"
           priority
         />
 
-        {/* Ambient subtle light wash */}
+        {/* Ambient subtle light wash & top boundary protection */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"
+          className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-[#E5EAF1]/70"
         />
 
         {/* Top Floating Designation Badge */}

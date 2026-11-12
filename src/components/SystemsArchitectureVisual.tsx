@@ -260,7 +260,7 @@ export function SystemsArchitectureVisual() {
               transition={{ duration: 0.9, ease: AETHERON_EASE }}
             />
             <image
-              href="/images/brand/aetheron-emblem.jpg"
+              href="/images/brand/aetheron-emblem.png"
               x="215"
               y="200"
               width="50"
